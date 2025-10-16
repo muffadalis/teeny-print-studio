@@ -1,0 +1,12 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "3D Printing Service"
+
+[params]
+  description = "Custom 3D printing service for gaming miniatures, phone cases, and personalized gifts"
+  author = "3D Prints"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

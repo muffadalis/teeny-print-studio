@@ -1,73 +1,112 @@
-# Welcome to your Lovable project
+# 3D Printing Service - Hugo Static Site
 
-## Project info
+A modern, vibrant website for a 3D printing service built with Hugo static site generator.
 
-**URL**: https://lovable.dev/projects/f1c15c2f-e58b-4123-bfb1-fd1575baec9e
+## Features
 
-## How can I edit this code?
+- Clean, semantic HTML5 structure
+- Mobile-responsive design
+- Custom CSS with gradient effects and animations
+- jQuery for form handling and smooth scrolling
+- SEO optimized with proper meta tags and semantic markup
+- Fast-loading static site
 
-There are several ways of editing your application.
+## Prerequisites
 
-**Use Lovable**
+- Hugo (Extended version recommended)
+- Download from: https://gohugo.io/installation/
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f1c15c2f-e58b-4123-bfb1-fd1575baec9e) and start prompting.
+## Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Install Hugo:
+   ```bash
+   # macOS
+   brew install hugo
+   
+   # Windows (using Chocolatey)
+   choco install hugo-extended
+   
+   # Linux
+   snap install hugo
+   ```
 
-**Use your preferred IDE**
+2. Clone or download this repository
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Run the development server:
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+hugo server -D
 ```
 
-**Edit a file directly in GitHub**
+Visit `http://localhost:1313` to view the site.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Building for Production
 
-**Use GitHub Codespaces**
+Generate static files:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+hugo
+```
 
-## What technologies are used for this project?
+The static site will be generated in the `public/` directory.
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The `public/` directory contains all the static files needed for deployment. You can deploy to:
 
-## How can I deploy this project?
+- **Netlify**: Connect your Git repository or drag & drop the `public` folder
+- **Vercel**: Import your repository or deploy via CLI
+- **GitHub Pages**: Push the `public` folder to your gh-pages branch
+- **Any static hosting**: Upload the contents of `public/` folder
 
-Simply open [Lovable](https://lovable.dev/projects/f1c15c2f-e58b-4123-bfb1-fd1575baec9e) and click on Share -> Publish.
+## Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+```
+.
+├── config.toml              # Hugo configuration
+├── content/                 # Content files
+│   └── _index.md           # Homepage content
+├── layouts/                 # Template files
+│   ├── _default/
+│   │   └── baseof.html     # Base template
+│   ├── index.html          # Homepage template
+│   └── partials/           # Reusable components
+│       ├── hero.html
+│       ├── services.html
+│       ├── gallery.html
+│       ├── how-it-works.html
+│       └── contact.html
+├── static/                  # Static assets
+│   ├── css/
+│   │   └── styles.css      # Main stylesheet
+│   ├── js/
+│   │   └── main.js         # jQuery scripts
+│   └── images/             # Image assets
+└── public/                  # Generated site (after build)
+```
 
-Yes, you can!
+## Customization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Colors & Styling
+Edit `static/css/styles.css` to modify colors, gradients, and styles. All colors use HSL format for easy customization.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Content
+- Edit partials in `layouts/partials/` to modify section content
+- Update contact information in `layouts/partials/contact.html`
+- Modify site title and description in `config.toml`
+
+### Images
+Replace images in `static/images/` with your own. Maintain the same filenames or update references in the partial templates.
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+This project is open source and available for personal and commercial use.
