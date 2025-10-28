@@ -1,6 +1,8 @@
 baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "3D Printing Service"
+canonifyURLs = true
+relativeURLs = true
 
 [params]
   description = "Custom 3D printing service for gaming miniatures, phone cases, and personalized gifts"
