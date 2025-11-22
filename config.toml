@@ -1,12 +1,12 @@
 baseURL = "https://example.com/"
 languageCode = "en-us"
-title = "3D Printing Service"
+title = "S.A.M.S. 3D Printing Service"
 canonifyURLs = true
 relativeURLs = false  # must be false for GitHub Pages project sites
 
 [params]
   description = "Custom 3D printing service for gaming miniatures, phone cases, and personalized gifts"
-  author = "3D Prints"
+  author = "S.A.M.S. 3D Prints"
 
 [markup]
   [markup.goldmark]
